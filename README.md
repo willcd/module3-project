@@ -8,19 +8,24 @@
 
 ## Description
 
-This project will be tackling the Tanzanian Water Pump dataset, provided as part of a DrivenData competition. I will use the methodologies I have learned in Module 3 to analyze, clean, and model this data to produce a workable model that can predict the functionality of a water pump on a level competitive with the best models in the competition.
+In this project I will be tackling the Tanzanian Water Pump dataset, provided by a DrivenData competition. I will use the methodologies I have learned in Module 3 to analyze, clean, and model this data to produce a workable model that can predict the functionality of water pumps in Tanzania.
 
-In addition, I will approach this with a set of business goals created to simulate how I would be interacting with this problem in the real world.
+I will approach this with a set of business goals created to simulate how I would be interacting with this problem in the real world.
 
 ## Business Problem
 
-As a data scientist for the Tanzanian Government, I am tasked with:
-* Building a predictive model for water pump functionality
-* Identifying efficient ways of allocating resources to inspect/repair pumps
-* Make recommendations for future data collection/cleanup to create better data sets and models
+Due to limited resources, and the vast size of Tanzania, it is hard to get up-to-date information on water pump functionality. As well, they cannot all be inspected, repaired, and replaced comprehensively.
+
+### Goals:
+
+1) Build a model to predict **non-functionality** in pumps - that is, pumps that are not fully functional, and are in need of repair or replacement. As we already have data on the functionality of the pumps in this dataset, we need to be able to predict functionality of pumps for which we do not have good functionality data.
+
+2) Advise on the most efficient use of this model and pump predictions to best use our limited resources to repair and replace water pumps.
 
 ## Dataset and Methodology
 
 There are nearly 75,000 data points representing as many water pumps spread over the entire nation of Tanzania. The data provided consists of a training set of 59,400 pumps which includes their status_group (target variable) data, and a test set of 14,850 pumps without status_group data. 
 
-Thus, all eda / cleaning / initial modelling will be done with the training set to prevent data leakage, and once decisions have been made as to methodology, the test set will be used at the end to create the submission to be scored on the DrivenData website.
+After EDA/data cleaning/feature engineering/feature selection/encoding, I will try out different modelling packages, tune the best ones, and create a final model. The goal is to have a good **recall** score, so as to correctly identify as many of the non-functional pumps as possible.
+
+After this, I will develop a plan for implementing this model and its predictions, so as to efficiently allocate resources throughout Tanzania.
